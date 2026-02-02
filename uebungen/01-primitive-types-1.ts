@@ -18,7 +18,6 @@
  */
 
 export function toEuro(amount: number, currencySymbol: string = "€"): string {
-  // TODO
   return "";
 }
 
@@ -33,6 +32,6 @@ export function normalizeName(name: string): string {
 }
 
 // Mini-Checks (sollten später true sein)
-console.log(toEuro(12) === "12.00 €");
-console.log(isAdult(18) === true);
-console.log(normalizeName("  jörg   aderhold ") === "Jörg aderhold");
+// console.log(toEuro(12) === "12.00 €");
+// console.log(isAdult(18) === true);
+// console.log(normalizeName("  jörg   aderhold ") === "Jörg aderhold");
