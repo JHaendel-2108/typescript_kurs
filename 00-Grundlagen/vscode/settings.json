@@ -1,7 +1,7 @@
 {
   // Editor settings
   "editor.tabSize": 2,
-  "editor.fontSize": 16,
+  "editor.fontSize": 20,
   "editor.rulers": [
       80,
       120
@@ -10,7 +10,7 @@
   "editor.suggestSelection": "first",
   "editor.formatOnSave": true,
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 20,
   // "terminal.integrated.defaultProfile.windows": "Command Prompt",
   // Debug
   "debug.onTaskErrors": "debugAnyway",
