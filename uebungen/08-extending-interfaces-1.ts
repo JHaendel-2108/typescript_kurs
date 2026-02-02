@@ -18,13 +18,11 @@ export interface Employee extends Person {
 }
 
 export function fullName(p: Person): string {
-  // TODO
-  return "";
+  return `${p.firstName} ${p.lastName}`;
 }
 
 export function employeeLabel(e: Employee): string {
-  // TODO
-  return "";
+  return `${fullName(e)} (#${e.employeeId}) - ${e.department}`;
 }
 
 console.log(employeeLabel({ firstName: "Max", lastName: "Muster", employeeId: "E-7", department: "IT" }) === "Max Muster (#E-7) - IT");

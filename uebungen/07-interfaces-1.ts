@@ -17,8 +17,7 @@ export interface User {
 }
 
 export function displayName(user: User): string {
-  // TODO
-  return "";
+  return ( 'email' in user ) ? `${user.name} <${user.email}>` : user.name;
 }
 
 console.log(displayName({ id: "u1", name: "Mia" }) === "Mia");

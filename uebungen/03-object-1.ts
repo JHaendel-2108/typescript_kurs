@@ -25,6 +25,6 @@ export function addTag(p: Product, tag: string): Product {
   return p;
 }
 
-const p1: Product = { id: "p1", title: "Karabiner", priceCents: 1299 };
-console.log(priceEuro(p1) === "12.99 €");
-console.log(addTag(p1, "climbing").tags?.includes("climbing") === true);
+// const p1: Product = { id: "p1", title: "Karabiner", priceCents: 1299 };
+// console.log(priceEuro(p1) === "12.99 €");
+// console.log(addTag(p1, "climbing").tags?.includes("climbing") === true);

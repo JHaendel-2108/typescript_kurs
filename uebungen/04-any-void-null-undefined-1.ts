@@ -13,12 +13,19 @@
  */
 
 export function parseJson(json: string): unknown {
-  // TODO
-  return {};
+  return JSON.parse(json);
 }
 
 export function getTitle(obj: unknown): string | undefined {
-  // TODO
+  if (
+    typeof obj === "object" &&
+    obj !== null &&
+    "title" in obj &&
+    typeof (obj as any).title === "string"
+  ) {
+    return (obj as any).title;
+  }
+
   return undefined;
 }
 
@@ -29,3 +36,6 @@ export function logAndReturn(message: string): string {
 
 console.log(getTitle(parseJson('{"title":"Hi"}')) === "Hi");
 console.log(getTitle(parseJson("null")) === undefined);
+
+let t = logAndReturn('Test');
+console.log(t);

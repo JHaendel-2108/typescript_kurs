@@ -17,16 +17,16 @@
  *    - Output: string getrimmt, mehrere Leerzeichen -> eins, erstes Zeichen groß.
  */
 
-export function toEuro(amount: number, currencySymbol: string = "€"): string {
+function toEuro(amount: number, currencySymbol: string = "€"): string {
   return "";
 }
 
-export function isAdult(age: number): boolean {
+function isAdult(age: number): boolean {
   // TODO
   return false;
 }
 
-export function normalizeName(name: string): string {
+function normalizeName(name: string): string {
   // TODO
   return "";
 }

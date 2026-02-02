@@ -16,7 +16,9 @@ export type Money = {
 };
 
 export function addMoney(a: Money, b: Money): Money {
-  // TODO
+  if( a.currency === b.currency ) {
+    a.amountCents += b.amountCents;
+  }
   return a;
 }
 

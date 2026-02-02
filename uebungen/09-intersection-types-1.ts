@@ -13,11 +13,10 @@ export type WithTimestamps = { createdAt: Date; updatedAt: Date };
 export type Entity = WithId & WithTimestamps;
 
 export function touch(e: Entity): Entity {
-  // TODO
-  return e;
+  return {...e, updatedAt : new Date()};
 }
 
 const e1: Entity = { id: "x", createdAt: new Date(0), updatedAt: new Date(0) };
 const e2 = touch(e1);
-console.log(e1.updatedAt.getTime() === 0);
-console.log(e2.updatedAt.getTime() !== 0);
+console.log(e1.updatedAt.getTime());
+console.log(e2.updatedAt.getTime());
