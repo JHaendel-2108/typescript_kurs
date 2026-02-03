@@ -15,3 +15,14 @@ function getId<T extends {id:string}>(obj: T): string
 
   getId({id: 'x'});
   getId({id: 'x', title: 'Test'});
+
+  function firstOrNull<T>(items: T[]): T | null
+  {
+   return items.length > 0 ? items[0] : null;
+  }
+
+  const n = firstOrNull([1,2,3]);
+  const s = firstOrNull(['a', 'b']);
+  const x = firstOrNull([]);
+
+  console.log(n,s,x);
