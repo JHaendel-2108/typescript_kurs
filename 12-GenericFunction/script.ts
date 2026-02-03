@@ -1,59 +1,18 @@
-/**
- * 
- *  gibt es nur in TypeScript (TS)
- * 
- * Enum: Liste mit mehreren Vorgaben von konstanden Werten
- * 
- */
-
-enum PermissionsLevel
+function getGenericArray<Type>(items: Type[]): Type[]
 {
-  GUEST = 'guest',
-  STUDENT = 'student',
-  INSTRUCTOR = 'instructor',
-  ADMIN = 'admin',
+  return new Array<Type>().concat(items);
 }
 
+let numberArray1 = [10,20,30,40];
+let numberArray2 = getGenericArray<number>(numberArray1);
+numberArray2.push(50);
 
-interface User
+console.log(numberArray1,numberArray2);
+
+function identify<T, U>(value: T, message: U): T
 {
-  name:string,
-  age:number,
-  courses: string[]
+  console.log(message);
+  return value;
 }
 
-interface UserExtended extends User
-{
-  permissionLevel: PermissionsLevel;
-};
-
-const user1:UserExtended = 
-{
-  name: 'Jörg',
-  age: 45,
-  courses: ['Java','Typescript'],
-  permissionLevel: PermissionsLevel.GUEST,
-}
-
-console.log(user1);
-
-
-const user2:UserExtended = 
-{
-  name: 'Andreas',
-  age: 25,
-  courses: ['C', 'C++', 'Python', 'Typescript'],
-  permissionLevel: PermissionsLevel.ADMIN,
-};
-
-console.log(user2);
-
-const user3:UserExtended = 
-{
-  name: 'Sabine',
-  age: 42,
-  courses: ['Java, C#'],
-  permissionLevel: PermissionsLevel.INSTRUCTOR,
-};
-
-console.log(user3);
+let returnNumber = identify<number, string>(100, 'Hallo'); 
