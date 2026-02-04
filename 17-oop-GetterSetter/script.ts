@@ -1,34 +1,59 @@
 class Point2D
 {
-  private xPos: number;   //! ohne weitere Angaben sind die Property immer public!
-  protected yPos: number;
+  public _xPos: number;   //! ohne weitere Angaben sind die Property immer public!
+  public _yPos: number;
 
   constructor(xPosInput: number, yPosInput: number)
   {
-    this.xPos = xPosInput;
-    this.yPos = yPosInput;
+    this._xPos = xPosInput;
+    this._yPos = yPosInput;
   }
 
-  movePosX(pos: number): void
-  {
-    this.xPos += pos;
-  }
+public get xPos() 
+{
+  return this._xPos;
+}
+
+public get yPos() 
+{
+  return this._yPos;
+}
   
 }
 
 class Point3D extends Point2D
 {
-protected zPos: number
+protected _zPos: number
 
   constructor(xPosInput: number, yPosInput: number,zPosInput: number)
   {
     super(xPosInput,yPosInput);
-    this.zPos = zPosInput;
+    this._zPos = zPosInput;
+  }
+
+  public set zPos(zPosNow: number)
+  {
+    this._zPos = zPosNow;
+  }
+
+  public get zPos() 
+  {
+  return this._zPos;
+  }
+
+  public set xPos(xPosNow: number)
+  {
+    this._xPos = xPosNow;
+  }
+
+  public get xPos() 
+  {
+  return this._xPos;
   }
 
   movePosY(pos:number): void
   {
-    this.yPos += pos;
+    this._yPos += pos;
   }
   
 }
