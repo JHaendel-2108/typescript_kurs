@@ -63,4 +63,6 @@ const p1: Point2D = new Point2D(0,0);
 const p2: Point3D = new Point3D(1,1,5);
 
 console.log(p1,p2);
-console.log(p2);
+
+p1.xPos;
+console.log(p1.xPos, p2);
