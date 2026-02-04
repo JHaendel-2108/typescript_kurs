@@ -9,21 +9,32 @@ class Point2D
     this._yPos = yPosInput;
   }
 
-public get xPos() 
-{
-  return this._xPos;
-}
+  public set xPos(xPosNow: number)
+  {
+    this._xPos = xPosNow;
+  }
 
-public get yPos() 
-{
-  return this._yPos;
-}
+    public get xPos() 
+    {
+      return this._xPos;
+    }
+
+  public set yPos(yPosNow: number)
+    {
+      this._yPos = yPosNow;
+    }
+
+      public get yPos() 
+      {
+        return this._yPos;
+      }
+
   
 }
 
 class Point3D extends Point2D
 {
-protected _zPos: number
+public _zPos: number
 
   constructor(xPosInput: number, yPosInput: number,zPosInput: number)
   {
@@ -64,5 +75,7 @@ const p2: Point3D = new Point3D(1,1,5);
 
 console.log(p1,p2);
 
-p1.xPos;
+// Aufruf der xPos - Mehtode mit Wertzuweisung
+p1.xPos = 4;
+
 console.log(p1.xPos, p2);
