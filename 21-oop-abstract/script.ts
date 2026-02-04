@@ -5,6 +5,7 @@ interface AppointmentInterface
   description: string;
 }
 
+// Grundgerüst für die Class Appointment
 abstract class AppointmentABC
 {
   protected startTime: Date;
