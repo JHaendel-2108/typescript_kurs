@@ -27,9 +27,7 @@ class Point2D
       public get yPos() 
       {
         return this._yPos;
-      }
-
-  
+      } 
 }
 
 class Point3D extends Point2D
